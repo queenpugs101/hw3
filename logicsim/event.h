@@ -11,6 +11,9 @@ struct Event
 
 typedef struct EventLess {
         //write the operator() required to make this a functor that compares Events by time
+        bool operator()(uint64_t lhs, uint64_t rhs)const{
+            return lhs<rhs ;
+        }
 } EventLess;
 	
 #endif

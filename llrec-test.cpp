@@ -66,7 +66,11 @@ void dealloc(Node* head)
 //   Add any helper functions or
 //   function object struct declarations
 // -----------------------------------------------
-
+struct IsEven {
+    bool operator()(int x) const {
+        return x % 2 == 0;
+    }
+};
 
 
 
@@ -84,8 +88,15 @@ int main(int argc, char* argv[])
     Node* head = readList(argv[1]);
     cout << "Original list: ";
     print(head);
+    // Node* smaller = nullptr;
+    // Node* larger = nullptr;
+    // llpivot(head, smaller, larger, 8);
+    // print(smaller);
+    // print(larger);
 
     // Test out your linked list code
+    // head = llfilter(head,IsEven() );
+    // print(head);
 
 
 
